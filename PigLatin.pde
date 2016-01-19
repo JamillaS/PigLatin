@@ -57,12 +57,15 @@ public String pigLatin(String sWord)
 		else
 			return sWord + "way";
 	}
-	else if(true)
+	for(int i = 1; i < sWord.length(); i++)
 	{
-		return sWord.substring(3) + sWord.substring(0,3) + "ay";
+		if(findFirstVowel(sWord) == i)
+		{
+			return sWord.substring(i) + sWord.substring(0,i) + "ay";
+		}
 	}
+	return "ERROR!";
 	
-	return "ERROR";
 	
 
 	/*
