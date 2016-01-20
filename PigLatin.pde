@@ -15,23 +15,23 @@ public int findFirstVowel(String sWord)
 //postcondition: returns the position of the first vowel in sWord.  If there are no vowels, returns -1
 {
 	for(int i = 0; i < sWord.length(); i++)
-		if(sWord.substring(0,2).equals("qu"))
+		if(sWord.substring(0,2).equalsIgnoreCase("qu"))
 		{
 			return i;
 		}
-		else if(sWord.substring(i,i+1).equals("a"))
+		else if(sWord.substring(i,i+1).equalsIgnoreCase("a"))
 			return i;
 	
-		else if(sWord.substring(i,i+1).equals("e"))
+		else if(sWord.substring(i,i+1).equalsIgnoreCase("e"))
 			return i;
 	
-		else if(sWord.substring(i,i+1).equals("i"))
+		else if(sWord.substring(i,i+1).equalsIgnoreCase("i"))
 			return i;
 	
-		else if(sWord.substring(i,i+1).equals("o"))
+		else if(sWord.substring(i,i+1).equalsIgnoreCase("o"))
 			return i;
 	
-		else if(sWord.substring(i,i+1).equals("u"))
+		else if(sWord.substring(i,i+1).equalsIgnoreCase("u"))
 			
 			return i;
 		
@@ -50,7 +50,7 @@ public String pigLatin(String sWord)
 	}
 	else if(findFirstVowel(sWord) == 0)
 	{
-		if(sWord.substring(0,2).equals("qu"))
+		if(sWord.substring(0,2).equalsIgnoreCase("qu"))
 		{
 			return sWord.substring(2) + "quay";
 		}
